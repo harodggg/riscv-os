@@ -1,5 +1,13 @@
+K = kernel
+U = user
 
-qemu: 
+OBJ = $(K)/entry.o
+
+QEMU = qemu-system-riscv65
+
+build:
+	gcc 
+qemu: risvc-os.img
 	echo "start qemu"
 
 .PHONY: clean
