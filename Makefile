@@ -18,7 +18,7 @@ gdb: build-kernel
 	qemu-system-riscv64 -machine virt -smp 1 -m 128M -bios none -nographic -kernel ./kernel/kernel -s -S
 
 gdb-remote:
-	riscv64-unknown-elf-gdb -ex 'target remote localhost:1234'
+	riscv64-elf-gdb -ex 'target remote localhost:1234'
 
 	
 
